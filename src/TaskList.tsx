@@ -59,7 +59,7 @@ export default class TaskList extends React.Component<TaskListProps, TaskListSta
     handleSaveEdit(changed_task: Task){
         let new_tasks: Dictionary<Task> = this.state.task_lookup;
         new_tasks[changed_task.id] = changed_task;
-        this.setState({task_lookup: new_tasks, cur_edit_task: null});
+        this.setState({task_lookup: new_tasks, cur_edit_task: null, greyout: ""});
     }
 
     handleCancelEdit(){
