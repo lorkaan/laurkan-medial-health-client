@@ -69,7 +69,7 @@ export default class TaskList extends React.Component<TaskListProps, TaskListSta
     handleDelete(task_id: string){
         let tasks = this.state.task_lookup;
         delete tasks[task_id];
-        this.setState({task_lookup: tasks, cur_edit_task: null});
+        this.setState({task_lookup: tasks, cur_edit_task: null, greyout: ""});
     }
 
     handleStoreTaskList(){
